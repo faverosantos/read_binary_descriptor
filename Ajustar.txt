@@ -1,0 +1,97 @@
+
+
+3) Fica dando mensagem de timeout, mesmo sem pacote. Isso se deve ao fato do timer funcionar em loop.
+
+2) O nível, no pacote, não está automático
+OK 1) Em algumas situações, não é enviada a quantidade de amostras corretas. Parece que ocorre um desincronismo entre o envio dos pacotes.
+Pode estar relacionado com o timeout...
+# Arrumado. Era problema de zerar as contagens de borda na interrupção.
+
+Por exemplo:
+
+Channel number: 0
+Timeout: 0
+Package counter: 009
+Timestamp: 133828535
+First level: 1
+Qtd first level: 0999
+Second level: 0
+Qtd second level: 1000
+i000091338285351099901000f
+-- Checksum [CH0]: 1999
+-- Timeout CH0! --
+
+
+Channel number: 0
+Timeout: 1
+Package counter: 010
+Timestamp: 133828734
+First level: 1
+Qtd first level: 0999
+Second level: 0
+Qtd second level: 0000
+i010101338287341099900000f
+-- Checksum [CH0]: 999
+
+
+Channel number: 0
+Timeout: 0
+Package counter: 011
+Timestamp: 133828734
+First level: 1
+Qtd first level: 0000
+Second level: 0
+Qtd second level: 0999
+i000111338287341000000999f
+-- Checksum [CH0]: 999
+-- Timeout CH0! --
+
+
+Channel number: 0
+Timeout: 1
+Package counter: 012
+Timestamp: 133828933
+First level: 1
+Qtd first level: 0999
+Second level: 0
+Qtd second level: 0000
+i010121338289331099900000f
+-- Checksum [CH0]: 999
+
+
+Channel number: 0
+Timeout: 0
+Package counter: 013
+Timestamp: 133828933
+First level: 1
+Qtd first level: 0000
+Second level: 0
+Qtd second level: 0999
+i000131338289331000000999f
+-- Checksum [CH0]: 999
+-- Timeout CH0! --
+
+
+Channel number: 0
+Timeout: 1
+Package counter: 014
+Timestamp: 133829132
+First level: 1
+Qtd first level: 0999
+Second level: 0
+Qtd second level: 0000
+i010141338291321099900000f
+-- Checksum [CH0]: 999
+
+
+Channel number: 0
+Timeout: 0
+Package counter: 015
+Timestamp: 133829132
+First level: 1
+Qtd first level: 0000
+Second level: 0
+Qtd second level: 0999
+i000151338291321000000999f
+-- Checksum [CH0]: 999
+-- Timeout CH0! --
